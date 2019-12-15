@@ -1,0 +1,202 @@
+
+// @font-face
+//     // font-family: "Europe"
+//     // src : url("../fonts/Europe/europe_ext.ttf") format('truetype')
+//     // src : url("../fonts/Europe/europe_ext.eot") format('embedded-opentype')
+//     // src : url("../fonts/Europe/europe_ext.woff") format('woff')
+        font-family: "Europe Ext Bold"
+        src: url("../fonts/EuropeExt-Bold") format('truetype')
+
+.container
+    width: 1140px  
+    margin: 0 auto
+    height: 100%
+
+$basic-color: #1f2f4f 
+$yellow: #fbc750
+$button: #f4ad38
+
+body
+    background-color: $basic-color
+    padding: 0
+    margin: 0
+
+    .menu
+        background-image: url(../img/divider.png)
+        background-size: cover
+        background-repeat: no-repeat
+        margin-top: 30px
+        height: 30px   
+
+        .menu-line
+            display: flex
+            flex-flow: row nowrap
+            justify-content: space-around
+            align-items: center
+            height: 100%
+
+            .menu-link
+
+                a
+                    text-transform: uppercase
+                    color: $basic-color
+                    font-family: 'Europe Ext Bold', arial
+                    font-size: 16px
+                    font-weight: bold
+                    text-decoration: none
+                    position: relative
+
+                    &:before
+                        content: ''
+                        width: 0%
+                        height: 2px
+                        background: $basic-color
+                        transition: all 0.4s ease
+                        position: absolute
+                        bottom: -5px
+                        left: 0
+
+                    &:hover
+
+                        &:before
+                            width: 100%
+
+    .contacts-head
+        padding: 20px 0
+
+        .container
+            display: flex
+            flex-flow: row nowrap
+            justify-content: space-between
+            align-items: center
+
+            .contacts-left
+                display: flex
+                flex-flow: column nowrap
+                justify-content: center
+                align-items: flex-start
+
+                .first-line
+                    display: flex
+                    flex-flow: row nowrap
+                    justify-content: flex-start
+                    align-items: center
+                    margin-bottom: 15px
+
+                    img
+                        width: 24px
+                        height: 24px
+                        margin-right: 20px
+
+                    .contact-link
+
+                        a
+                            color: white
+                            font-family: 'Europe Ext Bold', arial
+                            font-size: 18px
+                            font-weight: bold
+                            margin-right: 20px
+                            text-decoration: none
+                            cursor: pointer
+
+                    .contact-text
+                        font-size: 14px
+                        color: $yellow
+                        font-family: "Verdana", sans-serif
+                        padding: 0
+                        margin: 0
+                        padding-bottom: 2px
+                        cursor: default
+
+                .second-line
+                    display: flex
+                    flex-flow: row nowrap
+                    justify-content: flex-start
+                    align-items: center
+
+                    img
+                        width: 24px
+                        height: 24px
+                        margin-right: 20px
+
+                    .contact-link
+
+                        a
+                            color: white
+                            font-family: 'Europe Ext Bold', arial
+                            font-size: 18px
+                            font-weight: bold
+                            margin-right: 20px
+                            text-decoration: none
+                            cursor: pointer
+
+            .contacts-right
+                display: flex
+                flex-flow: column nowrap
+                justify-content: center
+                align-items: flex-start
+
+                .first-line
+                    display: flex
+                    flex-flow: row nowrap
+                    justify-content: flex-start
+                    align-items: center
+                    margin-bottom: 15px
+
+                    .contact-link
+                        display: flex
+                        flex-flow: row nowrap
+                        justify-content: flex-start
+                        align-items: center
+
+                        a
+                            color: white
+                            font-family: 'Europe Ext Bold', arial
+                            font-size: 18px
+                            font-weight: bold
+                            margin-right: 10px
+                            text-decoration: none
+                            cursor: pointer
+
+                        p
+                            color: white
+                            font-size: 16px
+                            padding: 0
+                            margin: 0
+                            font-weight: bold
+                            margin-right: 10px
+                            cursor: default
+                          
+
+                .second-line
+                    display: flex
+                    flex-flow: row nowrap
+                    justify-content: flex-start
+                    align-items: center
+
+                    .contact-link
+
+                        a
+                            color: white
+                            font-family: 'Europe Ext Bold', arial
+                            font-size: 18px
+                            font-weight: bold
+                            margin-right: 20px
+                            text-decoration: none
+                            cursor: pointer
+
+            .button-conect
+                background: $button
+                color: $basic-color
+                border-radius: 10px
+                padding: 13px 12px
+                font-family: 'Europe Ext Bold', arial
+                font-size: 18px
+                font-weight: bold
+                cursor: pointer
+                transition: all 0.4s ease
+
+                &:hover
+                    transform: scale(1.1)
+
+
