@@ -9,9 +9,13 @@ window.addEventListener("load", () => {
     let img = services.querySelector('img');
     let services_2 = document.querySelector('.services-2');
     let img_2 = services_2.querySelector('img');
+    let services_3 = document.querySelector('.services-3');
+    let img_3 = services_3.querySelector('img');
     let changes = 0;
     let changes_2 = 0;
+    let changes_3 = 0;
     let tariffs_block = document.querySelector('.tariffs-block');
+    let pay_block = document.querySelectorAll('.pay-block');
 
 
     window.onscroll = () => {
@@ -57,6 +61,22 @@ window.addEventListener("load", () => {
                     changes_2 = 100;
                 }
            }
+           if (current_scroll-screen.height-300 > document.querySelector('.pay-row').getBoundingClientRect().bottom) {
+                  pay_block.forEach( item => {
+                      item.classList.add('pay-block-show');
+                  })
+           }
+           if (services_3.getBoundingClientRect().top < screen.height) {
+            changes_3 += 1;
+            if (changes_3 < 50) {
+           
+            img_3.style.top = `-${changes_3}px`;
+            } else if (changes_3 < 100) {
+                img_3.style.top = `-${50 - (changes_3-50)}px`; 
+            } else {
+                changes_3 = 100;
+            }
+       }
 
         } else  {
             if (current_scroll < 60) {
@@ -95,7 +115,21 @@ window.addEventListener("load", () => {
                     changes_2 = 0;
                 }
              }
-            console.log('up');
+             if (current_scroll-screen.height-300 < document.querySelector('.pay-row').getBoundingClientRect().bottom) {
+                pay_block.forEach( item => {
+                    item.classList.remove('pay-block-show');
+                })
+            }
+            if (services_3.getBoundingClientRect().top+300 > 0) {
+                changes_3 -= 1;
+                if (changes_3 > 50) {
+                img_3.style.top = `${100-changes_3}px`;
+                } else if (changes_3 > 0) {
+                    img_3.style.top = `${changes_3}px`;
+                } else {
+                    changes_3 = 0;
+                }
+             }
         }
 
         last_scroll = current_scroll;
