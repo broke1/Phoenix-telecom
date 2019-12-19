@@ -138,7 +138,65 @@ window.addEventListener("load", () => {
 
 
 
+    $('.news-slider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1
+      });
 
+    let news = {
+        item_1 : {
+            zagolovok: 'Новость № 1',
+            img: "./img/tariff-1.png",
+            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. `
+        }, 
+        item_2 : {
+            zagolovok: 'Новость № 2',
+            img: "./img/tariff-2.png",
+            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. `
+        }, 
+        item_3 : {
+            zagolovok: 'Новость № 3',
+            img: "./img/tariff-3.png",
+            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. `
+        }, 
+        item_4 : {
+            zagolovok: 'Новость № 4',
+            img: "./img/tariff-3.png",
+            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus lacus, dictum eget libero fringilla, ornare volutpat neque volutpat. `
+        }, 
+    }
+
+    let modal = document.querySelector('.modal-news');
+    let body = document.querySelector('body');
+
+    document.querySelectorAll('.button-new').forEach( item => {
+        item.addEventListener('click', () => {
+            let newone = item.getAttribute("data-item");
+            modal.querySelector(".zagolovok-modal").innerHTML = news[newone].zagolovok;
+            modal.querySelector(".img-modal img").setAttribute("src",news[newone].img );
+            modal.querySelector(".text-modal").innerHTML = news[newone].text;
+            modal.classList.remove('modal-news-hide');
+            body.style.overflow = 'hidden';
+        })
+    })
+
+    document.querySelector('.close-btn').addEventListener('click', () => {
+        modal.classList.add('modal-news-hide');
+        body.style.overflow = 'auto';
+    })
 
 
 
