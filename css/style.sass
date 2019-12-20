@@ -564,6 +564,84 @@ body
                        color: $yellow
                        border: 4px solid $yellow
 
+    .footer
+        background: white
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-end
+        align-items: center
+
+        .left-contacts
+
+        .right-contacts
+            background-image: url(../img/divider.png)
+            background-size: contain
+            background-repeat: repeat
+            padding: 30px
+
+            .first-row
+                display: flex
+                flex-flow: row nowrap
+                justify-content: space-around
+                align-items: center
+                margin-bottom: 30px
+
+                .contact-link
+
+                    a
+                        color: $basic-color
+                        font-family: 'Europe Ext Bold', arial
+                        font-size: 18px
+                        font-weight: bold
+                        margin-right: 20px
+                        text-decoration: none
+                        cursor: pointer
+
+                .contact-text
+                    font-size: 14px
+                    color: $basic-color
+                    font-family: "Verdana", sans-serif
+                    padding: 0
+                    margin: 0
+                    padding-bottom: 2px
+                    cursor: default
+
+            .second-row
+                display: flex
+                flex-flow: row nowrap
+                justify-content: flex-start
+                align-items: center
+
+                .contact-link
+                    display: flex
+                    flex-flow: column nowrap
+                    justify-content: flex-start
+                    align-items: flex-start
+
+                    a 
+                        color: $basic-color
+                        font-family: 'Europe Ext Bold', arial
+                        font-size: 18px
+                        font-weight: bold
+                        margin-right: 20px
+                        text-decoration: none
+                        cursor: pointer
+
+                .button-conect
+                    text-transform: uppercase
+                    color: $basic-color
+                    font-family: 'Europe Ext Bold', arial
+                    font-size: 16px
+                    font-weight: bold
+                    cursor: pointer
+                    transition: all 0.4s ease
+                    padding: 7px
+                    border-radius: 10px
+                    border: 4px solid $basic-color
+
+                    &:hover
+                        background: white
+
 
     .modal-news
         position: fixed
@@ -594,15 +672,27 @@ body
                 position: absolute
                 top: 10px
                 right: 10px
-                border: 4px solid $basic-color
-                border-radius: 50%
+                padding: 5px
                 cursor: pointer
-                color: $basic-color
-                padding: 5px 9px
 
-                &:hover
-                    border: 4px solid $yellow
-                    color: $yellow
+                .first-stroke
+                    width: 20px
+                    height: 5px
+                    border-radius: 10px
+                    background: $basic-color
+                    position: absolute
+                    transform: rotate(45deg)
+                    right: 10px
+
+                .second-stroke
+                    width: 20px
+                    height: 5px
+                    border-radius: 10px
+                    background: $basic-color
+                    position: absolute
+                    transform: rotate(-45deg)
+                    right: 10px
+
 
             .zagolovok-modal
                 text-transform: uppercase
@@ -634,15 +724,10 @@ body
                 line-height: 30px
 
 
-
-    
     .modal-news-hide
         z-index: -1
         opacity: 0
         visibility: hidden
-
-
-
 
 
 @media screen and (max-width: 1600px)
