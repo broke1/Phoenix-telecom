@@ -180,6 +180,7 @@ window.addEventListener("load", () => {
     }
 
     let modal = document.querySelector('.modal-news');
+    let modalSend = document.querySelector('.modal-send');
     let body = document.querySelector('body');
 
     document.querySelectorAll('.button-new').forEach( item => {
@@ -199,6 +200,92 @@ window.addEventListener("load", () => {
     })
 
 
+    $(".phone-form-modal").mask("+7 (999) 999-99-99");
+
+    document.querySelectorAll('.button-conect').forEach( item => {
+        item.addEventListener('click', () => {
+            modalSend.classList.remove('modal-send-hide');
+            body.style.overflow = 'hidden';
+        })
+    })
+
+    document.querySelector('.close-btn-send').addEventListener('click', () => {
+        modalSend.classList.add('modal-send-hide');
+        body.style.overflow = 'auto';
+    })
+
+    document.querySelector('.button-send-modal').addEventListener('click', event => {
+
+
+            
+
+        let parrent = event.target.parentElement;
+        let accept = parrent.querySelector('input[type="checkbox"]');
+        let description = parrent.querySelector('.description-accept');
+
+    
+
+                
+              if(parrent.querySelector('.phone-form-modal').value != '') {
+                    if (accept.checked) { 
+                       sendModal(parrent);
+                    } else {
+                        description.innerHTML = "Согласитесь на отправку письма"
+                        description.classList.remove('hide');
+                        setTimeout(() =>{
+                        description.innerHTML = ""; 
+                        description.classList.add('hide');
+                            }, 2000);
+                    }
+                 } else {
+                description.innerHTML = "Введите корректный телефон";
+                description.classList.remove('hide');
+                setTimeout(() =>{
+                  description.innerHTML = ""; 
+                  description.classList.add('hide');
+                      }, 2000);
+              }
+
+            
+        
+       
+    });
+
 
 
 })
+
+
+  function sendModal(form) {
+
+   
+       
+       let description = form.parentElement.querySelector('.description');
+
+      
+        var formData = new FormData(form);
+        
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/send/send.php");
+        xhr.send(formData);
+
+        xhr.onreadystatechange = function() {
+        if (this.readyState != 4) return;
+
+        if (this.status != 200) {
+        console.log( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
+
+        return;
+        } else {
+        
+
+          description.classList.remove('hide');
+          form.classList.add('hide');     
+          
+
+        }
+
+        }
+
+
+  }

@@ -768,7 +768,7 @@ body .footer .right-contacts {
   background-image: url(../img/divider.png);
   background-size: contain;
   background-repeat: repeat;
-  padding: 30px;
+  padding: 15px 30px;
 }
 
 body .footer .right-contacts .first-row {
@@ -960,6 +960,224 @@ body .modal-news .modal .text-modal {
 }
 
 body .modal-news-hide {
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+
+body .modal-send {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+body .modal-send .modal {
+  position: absolute;
+  top: 10vh;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: auto;
+  height: auto;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 40px;
+  padding-top: 0;
+}
+
+body .modal-send .modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+body .modal-send .modal form .form-item {
+  margin: 20px 0;
+}
+
+body .modal-send .modal form input {
+  font-size: 20px;
+  line-height: 21px;
+  font-family: "Verdana", sans-serif;
+  text-align: left;
+  color: #1f2f4f;
+  padding: 5px;
+  width: 300px;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 2px solid #ACA6A6;
+  padding-bottom: 15px;
+}
+
+body .modal-send .modal form .button-send-modal {
+  margin: 20px auto;
+  text-transform: uppercase;
+  color: #1f2f4f;
+  font-family: 'Europe Ext Bold', arial;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid #1f2f4f;
+  width: 100px;
+}
+
+body .modal-send .modal form .button-send-modal:hover {
+  color: #fbc750;
+  border: 4px solid #fbc750;
+}
+
+body .modal-send .modal form .accept-block {
+  margin-top: 10px;
+}
+
+body .modal-send .modal form .accept-block input[type=checkbox] {
+  display: none;
+  width: 10px;
+}
+
+body .modal-send .modal form .accept-block input[type=checkbox]:checked + label:before {
+  border-right: none;
+  border-top: none;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+  top: 2px;
+  left: 2px;
+  height: 5px;
+}
+
+body .modal-send .modal form .accept-block input[type=checkbox] + label {
+  font-family: "Verdana", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  color: #1f2f4f;
+  padding-left: 30px;
+  position: relative;
+}
+
+body .modal-send .modal form .accept-block input[type=checkbox] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ACA6A6;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+body .modal-send .modal form .description-accept {
+  font-family: "Verdana", sans-serif;
+  font-size: 15px;
+  line-height: 180%;
+  margin: 15px 0;
+  text-align: left;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  color: #ACA6A6;
+  text-align: center;
+}
+
+body .modal-send .modal form .hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body .modal-send .modal form .close-btn-send {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+body .modal-send .modal form .close-btn-send .first-stroke {
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+  background: #1f2f4f;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 10px;
+}
+
+body .modal-send .modal form .close-btn-send .second-stroke {
+  width: 20px;
+  height: 5px;
+  border-radius: 10px;
+  background: #1f2f4f;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 10px;
+}
+
+body .modal-send .modal form .zagolovok-modal {
+  text-transform: uppercase;
+  color: #1f2f4f;
+  font-family: 'Europe Ext Bold', arial;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: bold;
+  margin: 30px auto;
+  text-align: center;
+  margin-top: 60px;
+}
+
+body .modal-send .modal .description {
+  font-family: "Verdana", sans-serif;
+  font-size: 25px;
+  text-align: left;
+  line-height: 180%;
+  color: #ACA6A6;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  margin: 50px auto;
+}
+
+body .modal-send .modal .hide {
+  opacity: 0;
+  visibility: hidden;
+  margin: 0;
+  height: 0 !important;
+  padding: 0;
+}
+
+body .modal-send-hide {
   z-index: -1;
   opacity: 0;
   visibility: hidden;

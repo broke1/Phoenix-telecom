@@ -11,6 +11,7 @@
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/jquery-migrate.js"></script>
     <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.maskedinput.min.js"></script>
     
     <title>Phoenix-telecom.ru</title>
 </head>
@@ -25,7 +26,7 @@
                     <div class="menu-link"><a href='#'>Новости</a></div>
                     <div class="menu-link"><a href='#'>Контакты</a></div>
                 </div>
-                <div class="button-conect-menu">Подключение</div>
+                <div class="button-conect-menu button-conect">Подключение</div>
             </div>
         </div>
     </section>
@@ -178,19 +179,6 @@
                 </div>
         </div>
     </section>
-    <article class="modal-news modal-news-hide">
-        <div class="modal">
-                <div class="close-btn">
-                    <p class="first-stroke"></p>
-                    <p class="second-stroke"></p>
-                </div>
-                <div class="zagolovok-modal"></div>
-                <div class="img-modal">
-                    <img src="" alt="">
-                </div>
-                <div class="text-modal"></div>
-        </div>
-    </article>
     <section class="footer">
             <div class="left-contacts">
 
@@ -209,5 +197,38 @@
                 </div>
             </div>
     </section>
+    <article class="modal-news modal-news-hide">
+        <div class="modal">
+                <div class="close-btn">
+                    <p class="first-stroke"></p>
+                    <p class="second-stroke"></p>
+                </div>
+                <div class="zagolovok-modal"></div>
+                <div class="img-modal">
+                    <img src="" alt="">
+                </div>
+                <div class="text-modal"></div>
+        </div>
+    </article>
+    <artical class="modal-send modal-send-hide">
+        <div class="modal">
+            <form action="/send/send.php"   name="modal">
+                <div class="close-btn-send">
+                    <p class="first-stroke"></p>
+                    <p class="second-stroke"></p>
+                </div>
+                    <p class="zagolovok-modal" >Оставьте свои данные и </br> мы Вам перезвоним</p>
+                    <input type="text" name="name" class="name-form-modal form-item"  placeholder="Имя" >
+                    <input type="text" name="phone" class="phone-form-modal form-item"  placeholder="Телефон" > 
+                    <div class="accept-block">
+                      <input  type="checkbox" id="accept" name="accept" value="male">
+                      <label for="accept">Я соглашаюсь на обработку персональных данных</label>
+                    </div>  
+                    <div class="description-accept hide"></div> 
+                    <div  class="button-send-modal  form-item" >Отправить</div>
+            </form>
+            <div class="description hide">Ваши данные отправлены</div>
+        </div>
+    </artical>
 </body>
 </html>
