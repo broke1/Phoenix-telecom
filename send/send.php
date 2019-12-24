@@ -3,7 +3,7 @@
 
 
 
-include_once('PHPMailer/class.phpmailer.php');
+//include_once('PHPMailer/class.phpmailer.php');
 
 
 
@@ -44,8 +44,8 @@ class SendForms {
         //     $this->text = htmlspecialchars($this->text);
         //     $this->text = trim($this->text);
         //  }
-          echo $this->name+"  "+$this->phone;
-        // mail($this->to_mail, "Заказ демонстрации", "Мой телефон:   ".$this->phone." \r\nМоя почта:   ".$this->email,"From: ot-platform.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
+         // echo $this->name+"  "+$this->phone;
+         mail($this->to_mail, "Заказ демонстрации", "Моё имя:   ".$this->name."\r\nМой телефон:   ".$this->phone,"From: phoenix-telecom.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
         
     
         
@@ -156,7 +156,7 @@ if ($_POST['name']) {
   //   }
     
 
-$send->to_mail = "broke1@yandex.ru";
+$send->to_mail = "sale@phoeinx-telecom.ru";
 // bykova@antivor.ru
 //$send->name_of_site = "";
 $send->sendmail();

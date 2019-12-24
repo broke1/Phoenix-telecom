@@ -16,6 +16,9 @@ window.addEventListener("load", () => {
     let changes_3 = 0;
     let tariffs_block = document.querySelector('.tariffs-block');
     let pay_block = document.querySelectorAll('.pay-block');
+    let arrow = document.querySelector('.arrow-up');
+
+
 
 
     window.onscroll = () => {
@@ -28,6 +31,10 @@ window.addEventListener("load", () => {
         if (current_scroll > last_scroll) {
            if (current_scroll > 60) {
                menu.classList.add('menu-fixed'); 
+               arrow.classList.add('arrow-up-show');  
+           }
+           if (current_scroll > (body.clientHeight-screen.height)) {
+                arrow.classList.remove('arrow-up-show'); 
            }
            if (services.getBoundingClientRect().top < screen.height) {
                 changes += 1;
@@ -79,9 +86,14 @@ window.addEventListener("load", () => {
        }
 
         } else  {
+            if (current_scroll < (body.clientHeight-screen.height)) {
+                arrow.classList.add('arrow-up-show'); 
+           }
             if (current_scroll < 60) {
                 menu.classList.remove('menu-fixed'); 
+                arrow.classList.remove('arrow-up-show'); 
             }
+            
             if (services.getBoundingClientRect().top+300 > 0) {
                 changes -= 1;
                 if (changes > 50) {
@@ -202,6 +214,19 @@ window.addEventListener("load", () => {
 
     $(".phone-form-modal").mask("+7 (999) 999-99-99");
 
+    arrow.addEventListener('click', ()=> {
+        console.log('asdsd');
+        backToTop();
+    });
+
+
+    function backToTop() {
+        if (window.pageYOffset > 0) {
+          window.scrollBy(0, -80);
+          setTimeout(backToTop, 7);
+        }
+      }
+
     document.querySelectorAll('.button-conect').forEach( item => {
         item.addEventListener('click', () => {
             modalSend.classList.remove('modal-send-hide');
@@ -274,13 +299,17 @@ window.addEventListener("load", () => {
 
         if (this.status != 200) {
         console.log( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
-
         return;
         } else {
         
 
           description.classList.remove('hide');
-          form.classList.add('hide');     
+          form.classList.add('hide');  
+          
+          setTimeout(() => {
+            document.querySelector('.modal-send').classList.add('modal-send-hide');
+            body.style.overflow = 'auto';
+          },2000)
           
 
         }

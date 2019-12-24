@@ -990,8 +990,6 @@ body .modal-send .modal {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  padding: 40px;
-  padding-top: 0;
 }
 
 body .modal-send .modal form {
@@ -1014,6 +1012,8 @@ body .modal-send .modal form {
   height: auto;
   position: relative;
   overflow: hidden;
+  margin: 40px;
+  margin-top: 0;
 }
 
 body .modal-send .modal form .form-item {
@@ -1167,6 +1167,7 @@ body .modal-send .modal .description {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   margin: 50px auto;
+  text-align: center;
 }
 
 body .modal-send .modal .hide {
@@ -1181,6 +1182,30 @@ body .modal-send-hide {
   z-index: -1;
   opacity: 0;
   visibility: hidden;
+}
+
+body .arrow-up {
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  z-index: 4;
+}
+
+body .arrow-up img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body .arrow-up-show {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1600px) {
