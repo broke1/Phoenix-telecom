@@ -388,6 +388,7 @@ body .services img {
 body .tariffs {
   position: relative;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 
 body .tariffs .logo-tarriff {
@@ -420,7 +421,6 @@ body .tariffs .tariffs-block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 100px;
 }
 
 body .tariffs .tariffs-block .tar-block-mini {
@@ -675,6 +675,7 @@ body .services-3 img {
 body .news {
   position: relative;
   overflow: hidden;
+  margin-bottom: 70px;
 }
 
 body .news .logo-tarriff {
@@ -694,7 +695,7 @@ body .news .zagolovok {
 }
 
 body .news .news-slider {
-  margin: 70px 0;
+  margin-top: 70px;
 }
 
 body .news .news-slider .newone {
@@ -1212,6 +1213,84 @@ body .arrow-up-show {
   body .present .back-present .text-present {
     font-size: 70px;
     bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body .news .news-slider {
+    padding: 0 50px;
+  }
+  body .news .news-slider .newone {
+    margin: 0 10px;
+  }
+  body .slick-next {
+    right: 0;
+  }
+  body .slick-prev {
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body .container {
+    width: 960px;
+  }
+  body .present .back-present .text-present {
+    font-size: 55px;
+  }
+  body .tariffs .tariffs-block .tar-block-mini {
+    width: 320px;
+    height: 320px;
+  }
+  body .tariffs .tariffs-block .text .zagolovok-text {
+    font-size: 25px;
+  }
+  body .tariffs .tariffs-block .text ul li {
+    font-size: 14px;
+  }
+  body .tariffs .tariffs-block .text .tariff-price {
+    font-size: 25px;
+  }
+  body .services {
+    height: 350px;
+  }
+  body .services-2 {
+    height: 350px;
+  }
+  body .services-3 {
+    height: 350px;
+  }
+  body .slick-next {
+    display: none !important;
+  }
+  body .slick-prev {
+    display: none !important;
+  }
+  body .news .news-slider {
+    padding: 0;
+  }
+  body .modal-news .modal {
+    top: 7vw;
+    width: 80vw;
+  }
+  body .modal-news .modal .zagolovok-modal {
+    font-size: 30px;
+    margin: 40px auto;
+  }
+  body .modal-news .modal .text-modal {
+    font-size: 18px;
+  }
+  body .footer .right-contacts {
+    padding: 10px 30px;
+  }
+  body .footer .right-contacts .first-row {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 770px) and (orientation: portrait) {
+  body .container {
+    width: 720px;
   }
 }
 /*# sourceMappingURL=style.css.map */

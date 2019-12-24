@@ -288,6 +288,7 @@ body
     .tariffs
         position: relative
         overflow: hidden
+        margin-bottom: 100px
 
         .logo-tarriff
             position: absolute
@@ -308,7 +309,6 @@ body
             flex-flow: row wrap
             justify-content: flex-start
             align-items: center
-            margin-bottom: 100px
 
             .tar-block-mini
                 width: $width/3
@@ -503,6 +503,7 @@ body
     .news
         position: relative
         overflow: hidden
+        margin-bottom: 70px
 
         .logo-tarriff
             position: absolute
@@ -519,7 +520,7 @@ body
             padding: 70px 0
 
         .news-slider
-            margin: 70px 0
+            margin-top: 70px
 
             .newone
                 height: 700px
@@ -946,4 +947,111 @@ body
                 .text-present
                     font-size: 70px
                     bottom: 20px
+
+@media screen and (max-width: 1200px)
+    body 
+
+        .news 
+            
+            .news-slider
+                padding: 0 50px 
+                
+                .newone
+                    margin: 0 10px
+
+        .slick-next
+            right: 0
+
+        .slick-prev
+            left: 0
+
+
+@media screen and (max-width: 1000px) 
+    body
+
+        .container
+            width: 960px
+
+        .present 
+            
+            .back-present 
+                
+                .text-present
+                    font-size: 55px
+
+        .tariffs 
+            
+            .tariffs-block 
+                
+                .tar-block-mini
+                    width: 320px
+                    height: 320px
+
+                .text 
+                    
+                    .zagolovok-text
+                        font-size: 25px
+
+                    ul 
+
+                        li
+                            font-size: 14px
+
+                    .tariff-price
+                        font-size: 25px
+
+        .services
+            height: 350px
+
+        .services-2
+            height: 350px
+
+        .services-3
+            height: 350px
+
+        .slick-next
+            display: none !important
+
+        .slick-prev
+            display: none !important
+
+        .news 
+            
+            .news-slider
+                padding: 0
+
+        .modal-news 
+            
+            .modal 
+                top: 7vw
+                width: 80vw
+                
+                .zagolovok-modal
+                    font-size: 30px
+                    margin: 40px auto
+
+                .text-modal
+                    font-size: 18px
+
+        .footer 
+            
+            .right-contacts
+                padding: 10px 30px
+
+
+                .first-row
+                    margin-bottom: 20px
+
+
+    
+@media screen and (max-width: 770px)  and (orientation: portrait)
+    body
+
+        .container
+            width: 720px
+
+
+        
+                    
+
 

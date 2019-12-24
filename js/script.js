@@ -17,6 +17,7 @@ window.addEventListener("load", () => {
     let tariffs_block = document.querySelector('.tariffs-block');
     let pay_block = document.querySelectorAll('.pay-block');
     let arrow = document.querySelector('.arrow-up');
+    let footer = document.querySelector('.footer');
 
 
 
@@ -33,7 +34,7 @@ window.addEventListener("load", () => {
                menu.classList.add('menu-fixed'); 
                arrow.classList.add('arrow-up-show');  
            }
-           if (current_scroll > (body.clientHeight-screen.height)) {
+           if (current_scroll > (body.clientHeight-screen.height-footer.getBoundingClientRect().height)) {
                 arrow.classList.remove('arrow-up-show'); 
            }
            if (services.getBoundingClientRect().top < screen.height) {
@@ -86,7 +87,7 @@ window.addEventListener("load", () => {
        }
 
         } else  {
-            if (current_scroll < (body.clientHeight-screen.height)) {
+            if (current_scroll < (body.clientHeight-screen.height-footer.getBoundingClientRect().height)) {
                 arrow.classList.add('arrow-up-show'); 
            }
             if (current_scroll < 60) {
@@ -215,7 +216,6 @@ window.addEventListener("load", () => {
     $(".phone-form-modal").mask("+7 (999) 999-99-99");
 
     arrow.addEventListener('click', ()=> {
-        console.log('asdsd');
         backToTop();
     });
 
