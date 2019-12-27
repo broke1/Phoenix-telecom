@@ -20,8 +20,8 @@ window.addEventListener("load", () => {
     let footer = document.querySelector('.footer');
 
 
-
-    if (screen.width > 500 &&  screen.orientation.type != 'landscape-primary' ) {
+   
+    if (screen.width > 500 &&  screen.height > 500) {
         window.onscroll = () => {
 
             

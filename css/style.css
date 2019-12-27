@@ -372,7 +372,7 @@ body .present .back-present .text-present {
 }
 
 body .services {
-  height: 450px;
+  height: 350px;
   width: 100%;
   position: relative;
   background: white;
@@ -554,7 +554,7 @@ body .tariffs .second-line-show .tar-block-mini:nth-child(6) {
 }
 
 body .services-2 {
-  height: 450px;
+  height: 350px;
   width: 100%;
   position: relative;
   background: white;
@@ -659,7 +659,7 @@ body .payment .pay-row .pay-block-show {
 }
 
 body .services-3 {
-  height: 450px;
+  height: 350px;
   width: 100%;
   position: relative;
   background: white;
@@ -1570,6 +1570,201 @@ body .arrow-up-show {
   }
   body .present .back-present .text-present {
     font-size: 40px;
+  }
+  body .services {
+    height: 250px;
+  }
+  body .services-2 {
+    height: 250px;
+  }
+  body .services-3 {
+    height: 250px;
+  }
+  body .tariffs .tariffs-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .tariffs .tariffs-block .tar-block-mini {
+    opacity: 1;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+    border-bottom: 2px solid #1f2f4f;
+  }
+  body .payment .pay-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: flex-center;
+        -ms-flex-pack: flex-center;
+            justify-content: flex-center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .payment .pay-row .pay-block {
+    opacity: 1;
+  }
+  body .modal-send .modal {
+    top: 4vh;
+    width: 90vw;
+  }
+  body .modal-send .modal form {
+    margin-bottom: 0;
+  }
+  body .modal-send .modal form .zagolovok-modal {
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  body .modal-send .modal form input {
+    margin: 15px 0;
+  }
+  body .modal-news .modal {
+    top: 3vw;
+    width: 85vw;
+  }
+}
+
+@media screen and (max-width: 380px) and (orientation: portrait) {
+  body .present .back-present .logo-present {
+    height: 60px;
+  }
+  body .present .back-present .text-present {
+    font-size: 18px;
+  }
+  body .services {
+    height: 120px;
+  }
+  body .services-2 {
+    height: 120px;
+  }
+  body .services-3 {
+    height: 120px;
+  }
+  body .modal-send .modal form .zagolovok-modal {
+    font-size: 16px;
+  }
+  body .modal-send .modal form input {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  body .contacts-head .container .contacts-left .first-line .contact-link a {
+    font-size: 14px;
+  }
+  body .contacts-head .container .contacts-left .first-line .contact-text {
+    font-size: 10px;
+  }
+  body .contacts-head .container .contacts-left .second-line .contact-link a {
+    font-size: 14px;
+  }
+  body .contacts-head .container .contacts-right .first-line .contact-link a {
+    font-size: 14px;
+  }
+  body .contacts-head .container .contacts-right .second-line .contact-link a {
+    font-size: 14px;
+  }
+  body .present .back-present .logo-present {
+    height: 105px;
+  }
+  body .present .back-present .text-present {
+    font-size: 30px;
+  }
+  body .services {
+    height: 200px;
+  }
+  body .services-2 {
+    height: 200px;
+  }
+  body .services-3 {
+    height: 200px;
+  }
+  body .modal-send .modal {
+    height: 90vh;
+  }
+  body .modal-send .modal form {
+    height: 100%;
+    overflow: auto;
+  }
+  body .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  body .footer .left-contacts {
+    display: block;
+    width: 100%;
+    height: 100px;
+  }
+  body .footer .right-contacts {
+    display: block;
+    width: 100%;
+  }
+  body .footer .right-contacts .first-row {
+    margin-bottom: 10px;
+  }
+  body .footer .right-contacts .second-row {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 330px) and (orientation: portrait) {
+  body .present .back-present .logo-present {
+    height: 50px;
+  }
+  body .present .back-present .text-present {
+    font-size: 14px;
+  }
+  body .news .zagolovok {
+    padding: 35px 0;
+  }
+  body .modal-send .modal {
+    top: 2vh;
+  }
+  body .modal-send .modal form .zagolovok-modal {
+    font-size: 14px;
+  }
+  body .modal-send .modal form input {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+  body .contacts-head {
+    position: relative;
+    height: 115px;
+  }
+  body .contacts-head .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body .contacts-head .container .contacts-left .first-line img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  body .contacts-head .container .contacts-left .second-line img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  body .contacts-head .container .button-conect {
+    position: absolute;
+    bottom: 10px;
+  }
+  body .present .back-present .logo-present {
+    height: 95px;
   }
 }
 /*# sourceMappingURL=style.css.map */
