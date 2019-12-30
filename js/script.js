@@ -18,6 +18,7 @@ window.addEventListener("load", () => {
     let pay_block = document.querySelectorAll('.pay-block');
     let arrow = document.querySelector('.arrow-up');
     let footer = document.querySelector('.footer');
+    let tarrifs = document.querySelector('.tariffs-block');
 
 
    
@@ -50,12 +51,24 @@ window.addEventListener("load", () => {
                         changes = 100;
                     }
             }
-                if (current_scroll > document.querySelector('.first-line-tariff').getBoundingClientRect().bottom) {
-                    tariffs_block.classList.add('first-line-show');
+            if (screen.width > 1000) {
+                    if (current_scroll > tarrifs.getBoundingClientRect().bottom) {
+
+                        tarrifs.querySelectorAll('.tar-block-max').forEach( item => {
+                            item.classList.add('show-tarrif');
+                        })
+
+                    }
                 }
-                if (current_scroll > document.querySelector('.second-line-tariff').getBoundingClientRect().bottom) {
-                    tariffs_block.classList.add('second-line-show');
-                }
+                // if (current_scroll > document.querySelector('.tar-block-max').getBoundingClientRect().bottom) {
+                //     tariffs_block.classList.add('first-line-show');
+                // }
+                // if (current_scroll > document.querySelector('.second-line-tariff').getBoundingClientRect().bottom) {
+                //     tariffs_block.classList.add('second-line-show');
+                // }
+
+
+
                 if (services_2.getBoundingClientRect().top < screen.height) {
                     changes_2 += 1;
                     if (changes_2 < 50) {
@@ -108,12 +121,16 @@ window.addEventListener("load", () => {
                         changes = 0;
                     }
                 }
-                if (current_scroll < document.querySelector('.first-line-tariff').getBoundingClientRect().bottom) {
-                    tariffs_block.classList.remove('first-line-show');
+                if (screen.width > 1000) {
+                    if (current_scroll < tarrifs.getBoundingClientRect().bottom) {
+
+                        tarrifs.querySelectorAll('.tar-block-max').forEach( item => {
+                            item.classList.remove('show-tarrif');
+                        })
+    
+                    }
                 }
-                if (current_scroll < document.querySelector('.second-line-tariff').getBoundingClientRect().bottom) {
-                    tariffs_block.classList.remove('second-line-show');
-                }
+                
 
                 if (services_2.getBoundingClientRect().top+300 > 0) {
                     changes_2 -= 1;
@@ -244,6 +261,15 @@ window.addEventListener("load", () => {
             body.style.overflow = 'hidden';
         })
     })
+
+    document.querySelectorAll('.tar-block-max').forEach( item => {
+        item.addEventListener('click', () => {
+            modalSend.classList.remove('modal-send-hide');
+            body.style.overflow = 'hidden';
+        })
+    })
+
+    
 
     document.querySelector('.close-btn-send').addEventListener('click', () => {
         modalSend.classList.add('modal-send-hide');
