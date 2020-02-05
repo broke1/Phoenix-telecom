@@ -26,7 +26,7 @@ body
         background-size: cover
         background-repeat: no-repeat
         margin-top: 30px
-        height: 30px
+        height: 40px
         transition: all 0.4s ease 
         position: relative 
 
@@ -984,8 +984,118 @@ body
     .arrow-up-show
         opacity: 1
 
+    /*  О компании*/
 
-    
+    .documents
+
+        .block-documents
+            margin: 100px 0
+            display: flex
+            flex-flow: row
+            justify-content: center
+
+            .link-documents
+                display: flex
+                flex-flow: column nowrap
+                justify-content: flex-start
+                align-items: flex-start
+
+                a
+                    text-decoration: none
+                    color: $yellow
+                    font-family: "Verdana", sans-serif
+                    font-size: 20px
+                    line-height: 180%
+                    position: relative
+                    margin: 10px 0
+                    opacity: 0
+                    transition: all 0.4s ease
+                    transform: translateX(200px)
+
+                    &:before
+                        content: ''
+                        width: 10px
+                        height: 3px
+                        background: $yellow
+                        position: absolute
+                        top: 50%
+                        left: -30px
+
+                    &:nth-child(1)
+                        transition-delay: 0.2s
+
+                    &:nth-child(2)
+                        transition-delay: 0.3s
+
+                    &:nth-child(3)
+                        transition-delay: 0.4s
+
+                    &:nth-child(4)
+                        transition-delay: 0.5s
+
+                    &:nth-child(5)
+                        transition-delay: 0.6s
+
+                    &:nth-child(6)
+                        transition-delay: 0.7s
+
+                    &:nth-child(7)
+                        transition-delay: 0.8s
+
+            .link-documents-shows
+
+                a
+                    opacity: 1
+                    transform: translateX(0px)
+
+
+    .requisites
+        background: white
+
+        .container
+            padding: 100px
+        
+            .grid-block
+                display: grid
+                grid-template-columns: 40% 60%
+                grid-template-rows: repeat(10, 60px)
+                border-bottom: 2px solid $basic-color
+                border-left: 2px solid $basic-color
+
+                .item-grid
+                    border-top: 2px solid $basic-color
+                    border-right: 2px solid $basic-color
+                    padding: 5px
+                    font-family: "Verdana", sans-serif
+                    font-size: 20px
+                    line-height: 140%
+                    position: relative
+                    color: $basic-color
+                    display: flex
+                    flex-flow: column
+                    justify-content: center
+                    align-items: center
+
+                .title
+                    font-weight: bold
+
+    .license
+
+        .license-block
+            margin: 100px 50px
+            display: flex
+            flex-flow: row wrap
+            justify-content: space-around
+            align-items: center
+
+            .license-itself
+                cursor: pointer
+                width: 250px
+
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
 
 
 @media screen and (max-width: 1600px)
@@ -1015,6 +1125,11 @@ body
 
         .slick-prev
             left: 0
+
+        .requisites
+
+            .container
+                padding: 50px 0
 
 
 @media screen and (max-width: 1000px) 
@@ -1105,6 +1220,14 @@ body
                 .first-row
                     margin-bottom: 20px
 
+        .requisites
+
+            .container
+            
+                .grid-block
+
+                    .item-grid
+                        font-size: 16px
 
     
 @media screen and (max-width: 770px)  and (orientation: portrait)
@@ -1199,6 +1322,24 @@ body
 
             .logo-present
                 height: 150px
+
+        .license
+
+            .license-block
+                margin: 50px 0px
+
+                .license-itself
+                    width: 300px
+                    margin: 30px  50px
+
+        .requisites 
+            
+            .container 
+                
+                .grid-block 
+                    
+                    .item-grid
+                        font-size: 14px
 
 @media screen and (max-width: 450px)  and (orientation: portrait)
     body
@@ -1430,6 +1571,16 @@ body
             .logo-present
                 height: 65px
 
+        .documents
+
+            .block-documents
+
+                .link-documents
+
+                    a
+                        opacity: 1 
+                        transform: translateX(0px)
+
         
 
 
@@ -1559,6 +1710,34 @@ body
             .logo-present
                 height: 115px
 
+        .license
+
+            .license-block
+                margin: 50px 0px
+
+                .license-itself
+                    width: 300px
+                    margin: 30px  70px
+
+        .requisites 
+            
+            .container 
+                
+                .grid-block 
+                    
+                    .item-grid
+                        font-size: 14px
+
+        .documents
+
+            .block-documents
+
+                .link-documents
+
+                    a
+                        opacity: 1 
+                        transform: translateX(0px)
+
 
 
 
@@ -1611,6 +1790,18 @@ body
 
         .just-img
             height: 200px
+
+        .requisites 
+            
+            .container 
+                
+                .grid-block 
+                    grid-template-rows: repeat(10, 80px)
+                    
+                    .item-grid
+                        font-size: 12px
+
+        
 
 
 
@@ -1769,6 +1960,22 @@ body
 
                         .text-options
                             font-size: 18px 
+
+        .requisites 
+            
+            .container 
+                
+                .grid-block 
+                    grid-template-rows: repeat(10, 100px)
+
+        .documents
+
+            .block-documents
+
+                .link-documents
+
+                    a
+                        font-size: 18px
 
 @media screen and (max-width: 600px)   and (orientation: landscape)  
     body 
