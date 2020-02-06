@@ -10,6 +10,7 @@ body {
   padding: 0;
   margin: 0;
   /*  О компании*/
+  /*  Контакты  */
 }
 
 body .menu {
@@ -1293,8 +1294,11 @@ body .arrow-up-show {
   opacity: 1;
 }
 
+body .documents {
+  padding: 100px 0;
+}
+
 body .documents .block-documents {
-  margin: 100px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1436,8 +1440,12 @@ body .requisites .container .grid-block .title {
   font-weight: bold;
 }
 
+body .license {
+  padding: 50px 0;
+}
+
 body .license .license-block {
-  margin: 100px 50px;
+  margin: 100px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1462,6 +1470,149 @@ body .license .license-block .license-itself img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+body .contacts {
+  background: white;
+  padding: 100px 0;
+}
+
+body .contacts .contacts-block .contacts-text {
+  margin-bottom: 50px;
+}
+
+body .contacts .contacts-block .contacts-text div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contacts .contacts-block .contacts-text div a {
+  text-decoration: none;
+  color: #1f2f4f;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+body .contacts .contacts-block .contacts-text p {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: "Verdana", sans-serif;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+body .contacts .contacts-block .zgolovok-mini {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contacts .contacts-block .zgolovok-mini p {
+  margin: 0;
+  padding: 0;
+  margin: 50px;
+  color: black;
+  font-family: 'Europe Ext Bold', arial;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+}
+
+body .contacts .contacts-block .zgolovok-mini p:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  background: black;
+  left: 0;
+}
+
+body .contacts .contacts-block .grid-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 30% 60%;
+      grid-template-columns: 10% 30% 60%;
+  -ms-grid-rows: (60px)[10];
+      grid-template-rows: repeat(10, 60px);
+  border-bottom: none;
+  border-left: 2px solid #1f2f4f;
+}
+
+body .contacts .contacts-block .grid-block .item-grid {
+  border-top: 2px solid #1f2f4f;
+  border-right: 2px solid #1f2f4f;
+  padding: 5px;
+  font-family: "Verdana", sans-serif;
+  font-size: 20px;
+  line-height: 140%;
+  position: relative;
+  color: #1f2f4f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contacts .contacts-block .grid-block .title {
+  font-weight: bold;
+}
+
+body .contacts .contacts-block .without {
+  border-bottom: 2px solid #1f2f4f;
+  -ms-grid-columns: 10% 15%  15% 30% 30%;
+      grid-template-columns: 10% 15%  15% 30% 30%;
+  -ms-grid-rows: (60px)[5];
+      grid-template-rows: repeat(5, 60px);
+}
+
+body .contacts .contacts-block .without .union {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4/6;
+}
+
+body .contacts .contacts-block .without .union-2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+body .contacts .contacts-block .without .union-3 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4/6;
 }
 
 @media screen and (max-width: 1600px) {
@@ -1571,6 +1722,9 @@ body .license .license-block .license-itself img {
   body .requisites .container .grid-block .item-grid {
     font-size: 16px;
   }
+  body .contacts .contacts-block .grid-block .item-grid {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 770px) and (orientation: portrait) {
@@ -1640,6 +1794,15 @@ body .license .license-block .license-itself img {
     margin: 30px  50px;
   }
   body .requisites .container .grid-block .item-grid {
+    font-size: 14px;
+  }
+  body .contacts .contacts-block {
+    padding: 0 10px;
+  }
+  body .contacts .contacts-block .contacts-text p {
+    font-size: 18px;
+  }
+  body .contacts .contacts-block .grid-block .item-grid {
     font-size: 14px;
   }
 }
@@ -1843,6 +2006,7 @@ body .license .license-block .license-itself img {
   body .footer .right-contacts {
     display: block;
     width: 100%;
+    padding: 10px 0px;
   }
   body .footer .right-contacts .first-row {
     margin-bottom: 10px;
@@ -1876,6 +2040,16 @@ body .license .license-block .license-itself img {
     opacity: 1;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+  body .contacts .contacts-block .contacts-text p {
+    font-size: 14px;
+  }
+  body .contacts .contacts-block .grid-obertka {
+    width: 100%;
+    overflow: auto;
+  }
+  body .contacts .contacts-block .grid-obertka .grid-block {
+    min-width: 650px;
   }
 }
 
@@ -1987,6 +2161,12 @@ body .license .license-block .license-itself img {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
+  body .contacts .contacts-block {
+    padding: 0 10px;
+  }
+  body .contacts .contacts-block .grid-block .item-grid {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 380px) and (orientation: portrait) {
@@ -2084,6 +2264,7 @@ body .license .license-block .license-itself img {
   body .footer .right-contacts {
     display: block;
     width: 100%;
+    padding: 10px 0;
   }
   body .footer .right-contacts .first-row {
     margin-bottom: 10px;
@@ -2133,7 +2314,7 @@ body .license .license-block .license-itself img {
         grid-template-rows: repeat(10, 100px);
   }
   body .documents .block-documents .link-documents a {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 

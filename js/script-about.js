@@ -6,11 +6,13 @@ window.addEventListener("load", () => {
     let last_scroll = window.pageYOffset;
     let menu = document.querySelector('.menu');
     let arrow = document.querySelector('.arrow-up');
-    let documents = document.querySelector('.link-documents');
     let footer = document.querySelector('.footer');
+    let  documents = '';
+    if (window.location.pathname.indexOf('contacts') == -1) {
+        documents = document.querySelector('.link-documents');
+    }
 
-
-   
+  
     if (screen.width > 500 &&  screen.height > 500) {
         window.onscroll = () => {
 
@@ -27,10 +29,11 @@ window.addEventListener("load", () => {
             if (current_scroll > (body.clientHeight-screen.height-footer.getBoundingClientRect().height)) {
                     arrow.classList.remove('arrow-up-show'); 
             }
-            if (current_scroll > (documents.getBoundingClientRect().bottom)) {
-                  documents.classList.add('link-documents-shows');
+            if (window.location.pathname.indexOf('contacts') == -1) {
+                if (current_scroll > (documents.getBoundingClientRect().bottom)) {
+                    documents.classList.add('link-documents-shows');
+                }
             }
-
 
             
            
@@ -43,9 +46,11 @@ window.addEventListener("load", () => {
                     menu.classList.remove('menu-fixed'); 
                     arrow.classList.remove('arrow-up-show'); 
                 }
-                if (current_scroll < (documents.getBoundingClientRect().bottom)) {
-                    documents.classList.remove('link-documents-shows');
-                 }
+                if (window.location.pathname.indexOf('contacts') == -1) {
+                    if (current_scroll < (documents.getBoundingClientRect().bottom)) {
+                        documents.classList.remove('link-documents-shows');
+                    }
+                }
                 
             }
 
