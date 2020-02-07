@@ -18,6 +18,8 @@ class SendForms {
     public $phone = ''; // Телефон
    // public $text = '';  // Сообщение
     public $to_mail = ''; // Кому отправлтяь письма 
+    
+    public $service = '';
   //  public $name_of_site = ''; // Название сайта
 
 
@@ -45,9 +47,13 @@ class SendForms {
         //     $this->text = trim($this->text);
         //  }
          // echo $this->name+"  "+$this->phone;
+         if ($this->service != '') {
+            mail($this->to_mail, "Заказ демонстрации", "Моё имя:   ".$this->name."\r\nМой телефон:   ".$this->phone."\r\nУслуга, которую хочу заказать:   ".$this->service,"From: phoenix-telecom.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
+         } else {
          mail($this->to_mail, "Заказ демонстрации", "Моё имя:   ".$this->name."\r\nМой телефон:   ".$this->phone,"From: phoenix-telecom.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
-        
+         }        
     
+   
         
 
 
@@ -142,6 +148,7 @@ foreach ($val as $key => $value) {
 //   if ($_POST['name_of_product']) {
 //     $send->name_of_product = $_POST['name_of_product'];
 //   }
+
 if ($_POST['name']) {
   $send->name = $_POST['name'];
 }
@@ -151,12 +158,17 @@ if ($_POST['name']) {
   if ($_POST['phone']) {
     $send->phone = $_POST['phone'];
   }
+  
+  if ($_POST['service']) {
+    $send->service = $_POST['service'];
+  }
   // if ($_POST['text']) {
   //     $send->text = $_POST['text'];
   //   }
     
 
-$send->to_mail = "sale@phoeinx-telecom.ru";
+//$send->to_mail = "sale@phoeinx-telecom.ru";
+$send->to_mail = "fredswork@list.ru";
 // bykova@antivor.ru
 //$send->name_of_site = "";
 $send->sendmail();

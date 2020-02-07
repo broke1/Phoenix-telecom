@@ -7,10 +7,6 @@ window.addEventListener("load", () => {
     let menu = document.querySelector('.menu');
     let arrow = document.querySelector('.arrow-up');
     let footer = document.querySelector('.footer');
-    let  documents = '';
-    if (window.location.pathname.indexOf('contacts') == -1) {
-        documents = document.querySelector('.link-documents');
-    }
 
   
     if (screen.width > 500 &&  screen.height > 500) {
@@ -29,11 +25,7 @@ window.addEventListener("load", () => {
             if (current_scroll > (body.clientHeight-screen.height-footer.getBoundingClientRect().height)) {
                     arrow.classList.remove('arrow-up-show'); 
             }
-            if (window.location.pathname.indexOf('contacts') == -1) {
-                if (current_scroll > (documents.getBoundingClientRect().bottom)) {
-                    documents.classList.add('link-documents-shows');
-                }
-            }
+            
 
             
            
@@ -46,11 +38,7 @@ window.addEventListener("load", () => {
                     menu.classList.remove('menu-fixed'); 
                     arrow.classList.remove('arrow-up-show'); 
                 }
-                if (window.location.pathname.indexOf('contacts') == -1) {
-                    if (current_scroll < (documents.getBoundingClientRect().bottom)) {
-                        documents.classList.remove('link-documents-shows');
-                    }
-                }
+               
                 
             }
 
@@ -85,10 +73,27 @@ window.addEventListener("load", () => {
 
     document.querySelectorAll('.button-conect').forEach( item => {
         item.addEventListener('click', () => {
+            let zagoolovok = document.querySelector('.zagolovok-modal');
+            let text = `Оставьте свои данные и мы Вам перезвоним`;
+            zagoolovok.innerHTML = text;
             modalSend.classList.remove('modal-send-hide');
             body.style.overflow = 'hidden';
         })
     }) 
+
+    document.querySelectorAll('.services-btn').forEach( item => {
+        item.addEventListener('click', (event) => {
+           let service = event.target.parentElement.querySelector('.service-text').innerText;
+           let zagoolovok = document.querySelector('.zagolovok-modal');
+           let text = `Заказать услугу <span>${service}</span>`;
+           let hidden = zagoolovok.parentElement.querySelector('.form-service');
+           hidden.value = service;
+           zagoolovok.innerHTML = text;
+
+             modalSend.classList.remove('modal-send-hide');
+             body.style.overflow = 'hidden';
+        })
+    })
 
     document.querySelector('.close-btn-send').addEventListener('click', () => {
         modalSend.classList.add('modal-send-hide');
@@ -171,6 +176,8 @@ window.addEventListener("load", () => {
         console.log( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
         return;
         } else {
+            
+          
         
 
           description.classList.remove('hide');
@@ -180,6 +187,10 @@ window.addEventListener("load", () => {
             document.querySelector('.modal-send').classList.add('modal-send-hide');
             document.body.style.overflow = 'auto';
           },2000)
+          setTimeout( () => {
+              description.classList.add('hide');
+              form.classList.remove('hide'); 
+          },2500)
           
 
         }

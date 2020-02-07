@@ -359,7 +359,7 @@ window.addEventListener("load", () => {
           
           setTimeout(() => {
             document.querySelector('.modal-send').classList.add('modal-send-hide');
-            body.style.overflow = 'auto';
+            document.body.style.overflow = 'auto';
           },2000)
           
 

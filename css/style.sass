@@ -942,6 +942,21 @@ body
                     margin: 30px auto
                     text-align: center
                     margin-top: 60px
+                    position: relative
+
+                    span
+                        position: relative
+
+                        &:after
+                            content: ''
+                            width: 100%
+                            height: 2px
+                            position: absolute
+                            bottom: -10px
+                            left: 0
+                            background: $basic-color
+
+
 
             .description
                     font-family: "Verdana", sans-serif
@@ -1193,6 +1208,47 @@ body
                 .union-3
                     grid-column: 4/6
 
+
+    /* Услуги */
+
+
+    .services-own
+        background: white
+        padding: 150px 0
+
+        .services-block
+            margin: 0 auto
+            width: 600px
+
+            .service-item
+                display: flex
+                flex-flow: row 
+                justify-content: space-between
+                align-items: center
+                border: 2px solid $basic-color
+                padding: 10px
+                margin-bottom: 1px
+
+                .service-text
+                    font-family: "Verdana", sans-serif
+                    font-size: 20px
+                    line-height: 140%
+                    color: $basic-color
+
+                .services-btn
+                    text-transform: uppercase
+                    color: $basic-color
+                    font-family: 'Europe Ext Bold', arial
+                    font-size: 16px
+                    font-weight: bold
+                    cursor: pointer
+                    transition: all 0.4s ease
+                    padding: 7px
+                    border-radius: 10px
+                    border: 4px solid $basic-color
+
+                    &:hover
+                        background: $yellow
 
 
 @media screen and (max-width: 1600px)
