@@ -109,7 +109,16 @@ window.addEventListener("load", () => {
                 
               if(parrent.querySelector('.phone-form-modal').value != '') {
                     if (accept.checked) { 
-                       sendModal(parrent);
+                        if (parrent.querySelector('.email-form-modal').value != '' && parrent.querySelector('.email-form-modal').value.indexOf('@') != -1) {
+                            sendModal(parrent);
+                        } else {
+                            description.innerHTML = "Введите корректную почту";
+                            description.classList.remove('hide');
+                            setTimeout(() =>{
+                            description.innerHTML = ""; 
+                            description.classList.add('hide');
+                                }, 2000);
+                        }
                     } else {
                         description.innerHTML = "Согласитесь на отправку письма"
                         description.classList.remove('hide');
