@@ -435,7 +435,7 @@ body .options .options-block .options-inside .text-options {
 }
 
 body .services {
-  height: 350px;
+  height: 250px;
   width: 100%;
   position: relative;
   background: white;
@@ -444,10 +444,12 @@ body .services {
 
 body .services img {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -619,7 +621,7 @@ body .tariffs .tarrif-dop-text {
 }
 
 body .services-2 {
-  height: 350px;
+  height: 250px;
   width: 100%;
   position: relative;
   background: white;
@@ -628,10 +630,12 @@ body .services-2 {
 
 body .services-2 img {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -741,7 +745,7 @@ body .payment .pay-row .pay-block-show {
 }
 
 body .services-3 {
-  height: 350px;
+  height: 250px;
   width: 100%;
   position: relative;
   background: white;
@@ -750,10 +754,12 @@ body .services-3 {
 
 body .services-3 img {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
-  top: 0;
-  left: 0;
+  top: -25px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -1274,6 +1280,16 @@ body .modal-send .modal form .zagolovok-modal span:after {
   background: #1f2f4f;
 }
 
+body .modal-send .modal form .comment-form-modal {
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  border: 1px solid #ACA6A6;
+  padding: 10px;
+  font-size: 20px;
+}
+
 body .modal-send .modal .description {
   font-family: "Verdana", sans-serif;
   font-size: 25px;
@@ -1525,13 +1541,26 @@ body .contacts .contacts-block .contacts-text div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 50px;
 }
 
 body .contacts .contacts-block .contacts-text div a {
   text-decoration: none;
   color: #1f2f4f;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-bottom: 20px;
+  font-size: 18px;
+}
+
+body .contacts .contacts-block .contacts-text .zagolovok {
+  text-transform: uppercase;
+  color: #1f2f4f;
+  font-family: 'Europe Ext Bold', arial;
+  font-size: 25px;
+  line-height: 35px;
+  font-weight: bold;
+  margin-left: 0;
+  margin-bottom: 30px;
 }
 
 body .contacts .contacts-block .contacts-text p {
@@ -1543,7 +1572,12 @@ body .contacts .contacts-block .contacts-text p {
   line-height: 140%;
 }
 
-body .contacts .contacts-block .zgolovok-mini {
+body .contacts .contacts-block .contacts-text .time {
+  font-size: 16px;
+  margin-left: 50px;
+}
+
+body .contacts .contacts-block .zagolovok-mini {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1559,7 +1593,7 @@ body .contacts .contacts-block .zgolovok-mini {
           align-items: center;
 }
 
-body .contacts .contacts-block .zgolovok-mini p {
+body .contacts .contacts-block .zagolovok-mini p {
   margin: 0;
   padding: 0;
   margin: 50px;
@@ -1570,7 +1604,7 @@ body .contacts .contacts-block .zgolovok-mini p {
   position: relative;
 }
 
-body .contacts .contacts-block .zgolovok-mini p:after {
+body .contacts .contacts-block .zagolovok-mini p:after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -1769,13 +1803,13 @@ body .services-own .services-block .service-item .services-btn:hover {
             transform: translateY(0px);
   }
   body .services {
-    height: 350px;
+    height: 200px;
   }
   body .services-2 {
-    height: 350px;
+    height: 200px;
   }
   body .services-3 {
-    height: 350px;
+    height: 200px;
   }
   body .slick-next {
     display: none !important;
@@ -1802,6 +1836,9 @@ body .services-own .services-block .service-item .services-btn:hover {
   }
   body .contacts .contacts-block .grid-block .item-grid {
     font-size: 18px;
+  }
+  body .modal-send .modal {
+    top: 2vh;
   }
 }
 
@@ -1832,13 +1869,13 @@ body .services-own .services-block .service-item .services-btn:hover {
     font-size: 40px;
   }
   body .services {
-    height: 300px;
+    height: 200px;
   }
   body .services-2 {
-    height: 300px;
+    height: 200px;
   }
   body .services-3 {
-    height: 300px;
+    height: 200px;
   }
   body .tariffs .tariffs-block {
     -webkit-box-pack: center;
@@ -1906,6 +1943,9 @@ body .services-own .services-block .service-item .services-btn:hover {
   }
   body .footer .center-contacts .third-row .contact-link {
     margin-bottom: 15px;
+  }
+  body .modal-send .modal {
+    top: 8vh;
   }
 }
 
@@ -2027,6 +2067,14 @@ body .services-own .services-block .service-item .services-btn:hover {
   }
   body .modal-send .modal {
     width: 90vw;
+    top: 2vh;
+  }
+  body .modal-send .modal form {
+    margin-bottom: 10px;
+  }
+  body .modal-send .modal form .comment-form-modal {
+    width: 90%;
+    font-size: 16px;
   }
   body .modal-send .modal form .zagolovok-modal {
     font-size: 20px;
@@ -2044,13 +2092,16 @@ body .services-own .services-block .service-item .services-btn:hover {
     font-size: 20px;
   }
   body .services {
-    height: 150px;
+    height: 100px;
   }
   body .services-2 {
-    height: 150px;
+    height: 100px;
   }
   body .services-3 {
-    height: 150px;
+    height: 100px;
+  }
+  body .services-3 img {
+    top: -10px;
   }
   body .tariffs .logo-tarriff {
     height: 65px;
@@ -2091,6 +2142,9 @@ body .services-own .services-block .service-item .services-btn:hover {
   body .news .zagolovok {
     font-size: 35px;
   }
+  body .news .news-slider .newone {
+    padding-bottom: 30px;
+  }
   body .options {
     padding: 50px 0;
   }
@@ -2116,9 +2170,14 @@ body .services-own .services-block .service-item .services-btn:hover {
     opacity: 1;
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+    font-size: 16px;
   }
   body .contacts .contacts-block .contacts-text p {
     font-size: 14px;
+  }
+  body .contacts .contacts-block .contacts-text .time {
+    font-size: 14px;
+    margin-left: 0;
   }
   body .contacts .contacts-block .grid-obertka {
     width: 100%;
@@ -2188,13 +2247,16 @@ body .services-own .services-block .service-item .services-btn:hover {
     font-size: 40px;
   }
   body .services {
-    height: 250px;
+    height: 150px;
   }
   body .services-2 {
-    height: 250px;
+    height: 150px;
   }
   body .services-3 {
-    height: 250px;
+    height: 150px;
+  }
+  body .services-3 img {
+    top: -10px;
   }
   body .tariffs .tariffs-block {
     -webkit-box-pack: center;
@@ -2225,6 +2287,8 @@ body .services-own .services-block .service-item .services-btn:hover {
   body .modal-send .modal {
     top: 4vh;
     width: 90vw;
+    height: 90vh;
+    overflow-y: scroll;
   }
   body .modal-send .modal form {
     margin-bottom: 0;
@@ -2306,19 +2370,29 @@ body .services-own .services-block .service-item .services-btn:hover {
     font-size: 18px;
   }
   body .services {
-    height: 120px;
+    height: 100px;
   }
   body .services-2 {
-    height: 120px;
+    height: 100px;
   }
   body .services-3 {
-    height: 120px;
+    height: 100px;
+  }
+  body .modal-send .modal {
+    height: 97vh;
+  }
+  body .modal-send .modal form .form-item {
+    margin: 8px 0;
+  }
+  body .modal-send .modal form .comment-form-modal {
+    height: 50px;
+    font-size: 14px;
   }
   body .modal-send .modal form .zagolovok-modal {
     font-size: 16px;
   }
   body .modal-send .modal form input {
-    width: 250px;
+    width: 90%;
   }
   body .options .options-block .options-inside .img-block {
     height: 120px;
@@ -2335,6 +2409,22 @@ body .services-own .services-block .service-item .services-btn:hover {
   }
   body .requisites .container .grid-block .item-grid {
     font-size: 12px;
+  }
+  body .news .news-slider .newone {
+    padding-bottom: 0px;
+  }
+  body .services-own .services-block .service-item .service-text {
+    font-size: 16px;
+  }
+  body .documents .block-documents .link-documents a {
+    font-size: 13px;
+  }
+  body .contacts .contacts-block .contacts-text div {
+    margin-left: 0px;
+  }
+  body .contacts .contacts-block .contacts-text div a {
+    font-size: 16px;
+    margin-left: 30px;
   }
 }
 
@@ -2361,20 +2451,16 @@ body .services-own .services-block .service-item .services-btn:hover {
     font-size: 30px;
   }
   body .services {
-    height: 200px;
+    height: 150px;
   }
   body .services-2 {
-    height: 200px;
+    height: 150px;
   }
   body .services-3 {
-    height: 200px;
+    height: 150px;
   }
   body .modal-send .modal {
     height: 90vh;
-  }
-  body .modal-send .modal form {
-    height: 100%;
-    overflow: auto;
   }
   body .options .options-block .options-inside .img-block {
     height: 120px;
@@ -2384,6 +2470,19 @@ body .services-own .services-block .service-item .services-btn:hover {
   }
   body .just-img {
     height: 300px;
+  }
+  body .contacts .contacts-block .contacts-text div {
+    margin-left: 0;
+  }
+  body .contacts .contacts-block .contacts-text div a {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  body .contacts .contacts-block .contacts-text p {
+    margin-left: 20px;
+  }
+  body .contacts .contacts-block .contacts-text .time {
+    font-size: 14px;
   }
 }
 
@@ -2399,6 +2498,11 @@ body .services-own .services-block .service-item .services-btn:hover {
   }
   body .modal-send .modal {
     top: 2vh;
+    overflow-y: scroll;
+  }
+  body .modal-send .modal form {
+    overflow: visible;
+    height: 100%;
   }
   body .modal-send .modal form .zagolovok-modal {
     font-size: 14px;
@@ -2417,10 +2521,13 @@ body .services-own .services-block .service-item .services-btn:hover {
         grid-template-rows: repeat(10, 100px);
   }
   body .documents .block-documents .link-documents a {
-    font-size: 14px;
+    font-size: 11px;
   }
   body .services-own .services-block .service-item .service-text {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  body .contacts .contacts-block .contacts-text div a {
+    font-size: 14px;
   }
 }
 
@@ -2449,6 +2556,9 @@ body .services-own .services-block .service-item .services-btn:hover {
   body .contacts-head .container .button-conect {
     position: absolute;
     bottom: 10px;
+  }
+  body .services-own .services-block {
+    width: 550px;
   }
   body .present .back-present .logo-present {
     height: 95px;

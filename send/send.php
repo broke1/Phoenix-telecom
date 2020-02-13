@@ -14,9 +14,9 @@ class SendForms {
    // public $id_of_form = ''; // Имя формы
    // public $name_of_product = ''; // Название товара
     public $name = ''; // Имя
-   // public $email = '';  // Почта
+    public $email = '';  // Почта
     public $phone = ''; // Телефон
-   // public $text = '';  // Сообщение
+    public $text = '';  // Сообщение
     public $to_mail = ''; // Кому отправлтяь письма 
     
     public $service = '';
@@ -34,23 +34,23 @@ class SendForms {
             $this->name = htmlspecialchars($this->name);
             $this->name = trim($this->name);
          }
-        //  if ($this->email != '') {
-        //     $this->email = htmlspecialchars($this->email);
-        //     $this->email = trim($this->email);
-        //  }
+         if ($this->email != '') {
+            $this->email = htmlspecialchars($this->email);
+            $this->email = trim($this->email);
+         }
          if ($this->phone != '') {
             $this->phone = htmlspecialchars($this->phone);
             $this->phone = trim($this->phone);
          }
-        //  if ($this->text != '') {
-        //     $this->text = htmlspecialchars($this->text);
-        //     $this->text = trim($this->text);
-        //  }
+         if ($this->text != '') {
+            $this->text = htmlspecialchars($this->text);
+            $this->text = trim($this->text);
+         }
          // echo $this->name+"  "+$this->phone;
          if ($this->service != '') {
-            mail($this->to_mail, "Заказ демонстрации", "Моё имя:   ".$this->name."\r\nМой телефон:   ".$this->phone."\r\nУслуга, которую хочу заказать:   ".$this->service,"From: phoenix-telecom.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
+            mail($this->to_mail, "Заказ услуги", "Моё имя:   ".$this->name."\r\nМой телефон:   ".$this->phone."\r\nМоя почта:   ".$this->email."\r\nМой комментарий:   ".$this->text."\r\nУслуга, которую хочу заказать:   ".$this->service,"From: phoenix-telecom.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
          } else {
-         mail($this->to_mail, "Заказ демонстрации", "Моё имя:   ".$this->name."\r\nМой телефон:   ".$this->phone,"From: phoenix-telecom.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
+         mail($this->to_mail, "Заказ демонстрации", "Моё имя:   ".$this->name."\r\nМой телефон:   ".$this->phone."\r\nМоя почта:   ".$this->email."\r\nМой комментарий:   ".$this->text,"From: phoenix-telecom.ru \r\n"."Content-type: text/plain; charset=UTF-8\r\n");
          }        
     
    
@@ -152,9 +152,9 @@ foreach ($val as $key => $value) {
 if ($_POST['name']) {
   $send->name = $_POST['name'];
 }
-// if ($_POST['email']) {
-//     $send->email = $_POST['email'];
-//   }
+if ($_POST['email']) {
+    $send->email = $_POST['email'];
+  }
   if ($_POST['phone']) {
     $send->phone = $_POST['phone'];
   }
@@ -162,9 +162,9 @@ if ($_POST['name']) {
   if ($_POST['service']) {
     $send->service = $_POST['service'];
   }
-  // if ($_POST['text']) {
-  //     $send->text = $_POST['text'];
-  //   }
+  if ($_POST['text']) {
+      $send->text = $_POST['text'];
+    }
     
 
 //$send->to_mail = "sale@phoeinx-telecom.ru";
@@ -182,3 +182,4 @@ exec('php '.$_SERVER['DOCUMENT_ROOT'].'/myforms/sendCis.php '.urlencode($post).'
 
 
 ?>
+

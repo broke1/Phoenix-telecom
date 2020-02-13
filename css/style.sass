@@ -307,7 +307,7 @@ body
 
 
     .services
-        height: 350px
+        height: 250px
         width: 100%
         position: relative
         background: white
@@ -315,10 +315,11 @@ body
 
         img
             position: absolute
-            width: 100%
+            width: 80%
             height: 100%
             top: 0
-            left: 0
+            left: 50%
+            transform: translateX(-50%)
             transition: all 0.4s ease
 
     .tariffs
@@ -449,7 +450,7 @@ body
             margin-top: 60px
 
     .services-2
-        height: 350px
+        height: 250px
         width: 100%
         position: relative
         background: white
@@ -457,10 +458,11 @@ body
 
         img
             position: absolute
-            width: 100%
+            width: 80%
             height: 100%
             top: 0
-            left: 0
+            left: 50%
+            transform: translateX(-50%)
             transition: all 0.4s ease
 
     .just-img
@@ -537,7 +539,7 @@ body
                 opacity: 1
 
     .services-3
-        height: 350px
+        height: 250px
         width: 100%
         position: relative
         background: white
@@ -545,10 +547,11 @@ body
 
         img
             position: absolute
-            width: 100%
+            width: 80%
             height: 100%
-            top: 0
-            left: 0
+            top: -25px
+            left: 50%
+            transform: translateX(-50%)
             transition: all 0.4s ease
 
     .news
@@ -967,6 +970,14 @@ body
                             left: 0
                             background: $basic-color
 
+                .comment-form-modal
+                    border-radius: 5px
+                    box-shadow: none
+                    border: none
+                    border: 1px solid #ACA6A6
+                    padding: 10px
+                    font-size: 20px
+
 
 
             .description
@@ -1135,18 +1146,30 @@ body
 
             .contacts-text
                 margin-bottom: 50px
-                
+
                 div
                     display: flex
                     flex-flow: row wrap
                     justify-content: flex-start
                     align-items: center
+                    margin-left: 50px
 
                     a
                         text-decoration: none
                         color: $basic-color
-                        margin-left: 30px
+                        margin-left: 50px
                         margin-bottom: 20px
+                        font-size: 18px
+
+                .zagolovok
+                    text-transform: uppercase
+                    color: $basic-color
+                    font-family: 'Europe Ext Bold', arial
+                    font-size: 25px
+                    line-height: 35px
+                    font-weight: bold
+                    margin-left: 0
+                    margin-bottom: 30px
 
                 p
                     margin: 0
@@ -1156,7 +1179,11 @@ body
                     font-size: 20px
                     line-height: 140%
 
-            .zgolovok-mini
+                .time
+                    font-size: 16px
+                    margin-left: 50px
+
+            .zagolovok-mini
                 display: flex
                 flex-flow: row
                 justify-content: flex-start
@@ -1343,13 +1370,13 @@ body
         
 
         .services
-            height: 350px
+            height: 200px
 
         .services-2
-            height: 350px
+            height: 200px
 
         .services-3
-            height: 350px
+            height: 200px
 
         .slick-next
             display: none !important
@@ -1393,6 +1420,11 @@ body
                     
                     .item-grid
                         font-size: 18px
+
+        .modal-send 
+            
+            .modal
+                top: 2vh
 
     
 @media screen and (max-width: 770px)  and (orientation: portrait)
@@ -1452,13 +1484,13 @@ body
                     font-size: 40px
 
         .services
-            height: 300px
+            height: 200px
 
         .services-2
-            height: 300px
+            height: 200px
         
         .services-3
-            height: 300px
+            height: 200px
 
 
         .tariffs 
@@ -1539,6 +1571,11 @@ body
 
                     .contact-link
                         margin-bottom: 15px
+
+        .modal-send 
+            
+            .modal
+                top: 8vh
 
 @media screen and (max-width: 450px)  and (orientation: portrait)
     body
@@ -1656,8 +1693,14 @@ body
             
             .modal
                 width: 90vw
+                top: 2vh
 
-                form 
+                form
+                    margin-bottom: 10px 
+
+                    .comment-form-modal
+                        width: 90%
+                        font-size: 16px
                     
                     .zagolovok-modal
                         font-size: 20px
@@ -1684,13 +1727,16 @@ body
                     font-size: 20px
 
         .services
-            height: 150px
+            height: 100px
 
         .services-2
-            height: 150px
+            height: 100px
         
         .services-3
-            height: 150px
+            height: 100px
+
+            img
+                top: -10px
 
         .tariffs 
             
@@ -1731,6 +1777,11 @@ body
             .zagolovok
                 font-size: 35px
 
+            .news-slider 
+                
+                .newone
+                    padding-bottom: 30px
+
 
 
         .options
@@ -1762,6 +1813,7 @@ body
                     a
                         opacity: 1 
                         transform: translateX(0px)
+                        font-size: 16px
 
 
         .contacts 
@@ -1773,12 +1825,20 @@ body
                     p
                         font-size: 14px
 
+                    .time
+                        font-size: 14px
+                        margin-left: 0
+
+
+
                 .grid-obertka
                     width: 100%
                     overflow: auto
 
                     .grid-block
                         min-width: 650px
+
+
 
         .services-own 
             
@@ -1876,13 +1936,16 @@ body
                     font-size: 40px
 
         .services
-            height: 250px
+            height: 150px
 
         .services-2
-            height: 250px
+            height: 150px
 
         .services-3
-            height: 250px
+            height: 150px
+
+            img
+                top: -10px
 
         .tariffs
 
@@ -1910,6 +1973,8 @@ body
             .modal
                 top: 4vh
                 width: 90vw
+                height: 90vh
+                overflow-y: scroll
 
                 form
                     margin-bottom: 0 
@@ -2013,25 +2078,33 @@ body
                     font-size: 18px
 
         .services
-            height: 120px
+            height: 100px
 
         .services-2
-            height: 120px
+            height: 100px
 
         .services-3
-            height: 120px
+            height: 100px
 
         .modal-send 
             
-            .modal 
+            .modal
+                height: 97vh 
                 
                 form 
+
+                    .form-item
+                        margin: 8px 0
+
+                    .comment-form-modal
+                        height: 50px
+                        font-size: 14px
                     
                     .zagolovok-modal
                         font-size: 16px
 
                     input
-                        width: 250px
+                        width: 90%
 
 
         .options 
@@ -2058,6 +2131,44 @@ body
                     
                     .item-grid
                         font-size: 12px
+
+        .news 
+
+            .news-slider 
+                
+                .newone
+                    padding-bottom: 0px
+
+        .services-own 
+            
+            .services-block 
+                
+                .service-item 
+                    
+                    .service-text
+                        font-size: 16px
+
+        .documents 
+            
+            .block-documents 
+                
+                .link-documents 
+                    
+                    a
+                        font-size: 13px
+
+        .contacts 
+            
+            .contacts-block 
+                
+                .contacts-text 
+                    
+                    div
+                        margin-left: 0px
+
+                        a
+                            font-size: 16px
+                            margin-left: 30px
 
         
 
@@ -2118,13 +2229,13 @@ body
                     font-size: 30px
 
         .services
-            height: 200px
+            height: 150px
 
         .services-2
-            height: 200px
+            height: 150px
 
         .services-3
-            height: 200px
+            height: 150px
 
 
         .modal-send 
@@ -2133,8 +2244,6 @@ body
                 height: 90vh
 
                 form
-                    height: 100%
-                    overflow: auto
 
 
         
@@ -2153,6 +2262,24 @@ body
         .just-img
             height: 300px
 
+        .contacts 
+            
+            .contacts-block 
+                
+                .contacts-text 
+                    
+                    div 
+                        margin-left: 0
+                        
+                        a
+                            margin-left: 20px
+                            font-size: 16px
+
+                    p
+                        margin-left: 20px
+
+                    .time
+                        font-size: 14px
 
 
 @media screen and (max-width: 330px)  and (orientation: portrait)
@@ -2179,8 +2306,11 @@ body
             
             .modal
                 top: 2vh
+                overflow-y: scroll
 
                 form 
+                    overflow: visible
+                    height: 100%
                     
                     .zagolovok-modal
                         font-size: 14px
@@ -2215,7 +2345,7 @@ body
                 .link-documents
 
                     a
-                        font-size: 14px
+                        font-size: 11px
 
         .services-own 
             
@@ -2224,7 +2354,20 @@ body
                 .service-item 
                     
                     .service-text
-                        font-size: 16px
+                        font-size: 14px
+
+        .contacts 
+            
+            .contacts-block 
+                
+                .contacts-text 
+                    
+                    div 
+                        
+                        a
+                            font-size: 14px
+
+        
 
 @media screen and (max-width: 600px)   and (orientation: landscape)  
     body 
@@ -2256,6 +2399,11 @@ body
                 .button-conect
                     position: absolute
                     bottom: 10px
+
+        .services-own 
+            
+            .services-block
+                width: 550px
 
         .present 
             
