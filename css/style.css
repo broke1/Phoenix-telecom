@@ -1549,7 +1549,7 @@ body .contacts .contacts-block .contacts-text div a {
   color: #1f2f4f;
   margin-left: 50px;
   margin-bottom: 20px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 body .contacts .contacts-block .contacts-text .zagolovok {
@@ -1568,12 +1568,12 @@ body .contacts .contacts-block .contacts-text p {
   margin-bottom: 20px;
   padding: 0;
   font-family: "Verdana", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 140%;
 }
 
 body .contacts .contacts-block .contacts-text .time {
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 50px;
 }
 
@@ -2172,12 +2172,16 @@ body .services-own .services-block .service-item .services-btn:hover {
             transform: translateX(0px);
     font-size: 16px;
   }
+  body .contacts .contacts-block .contacts-text a {
+    font-size: 18px;
+    margin-right: 50px;
+  }
   body .contacts .contacts-block .contacts-text p {
     font-size: 14px;
   }
   body .contacts .contacts-block .contacts-text .time {
     font-size: 14px;
-    margin-left: 0;
+    margin-left: 0px;
   }
   body .contacts .contacts-block .grid-obertka {
     width: 100%;
